@@ -24,4 +24,5 @@ ssh -X -p 3122 mininet@127.0.0.1
 export DISPLAY=192.168.1.103:0.0
 firefox 
 
+
 ```
