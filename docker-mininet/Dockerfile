@@ -7,8 +7,6 @@ MAINTAINER Robert Grzelka <robert.grzelka@outlook.com>
 ARG user=robgrzel
 
 
-
-
 RUN apt-get update && \
 apt-get install -y --no-install-recommends \
 openssh-server cmake gcc build-essential nano vim \
@@ -16,7 +14,6 @@ python tcpdump telnet byacc flex iproute2 \
 gdbserver less bison valgrind firefox \
 curl iproute2 iputils-ping mininet net-tools \
 tcpdump x11-xserver-utils xterm sudo
-
 
 
 RUN mkdir /var/run/sshd
@@ -53,5 +50,30 @@ EXPOSE 22 6633 6653 6640
 
 RUN service openvswitch-switch start && ovs-vsctl set-manager ptcp:6640
 
+RUN echo -e "auto eth0\niface eth0 inet dhcp" >> /etc/network/interfaces
+
+
 CMD ["/usr/sbin/sshd", "-D"]
 
+################################################################################
+####NOTES
+################################################################################
+
+## go to powershell admin
+
+##build locally with:
+#docker build -t mininet-docker E:\_Docker-Containers\docker-mininet
+
+##or pull from cloud:
+#docker pull robgrzel/docker-mininet
+
+##run mininet container as ssh server
+# docker run -itd -p 3122:22 -p 6633:6633 -p 6653:6653 -p 6640:6640 -h mininet --privileged --security-opt seccomp:unconfined --name mininet-container --dns=8.8.8.8 -v E:/tmp/X11-unix:/tmp/.X11-unix -v ${PWD}:/home/mininet/$(${PWD}|split-path -leaf) -P docker-mininet
+
+##connect by ssh
+#ssh -X -p 3122 mininet@127.0.0.1
+
+##set display for x-server
+#export DISPLAY=192.168.1.103:0.0
+
+##open firefox

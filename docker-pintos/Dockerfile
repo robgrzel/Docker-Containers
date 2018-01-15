@@ -117,3 +117,23 @@ WORKDIR /pintos
 
 CMD ["/usr/sbin/sshd", "-D"]
 
+## to run (powershell admin):
+# ipconfig (get IPv4 Address)
+# set-variable -name DISPLAY -value 192.168.1.103:0.0
+## create junction of "pintos" 
+## ...at "E:\EDA093 - Operating Systems\EDA093_CODE\pintos"
+## ...to "E:\Docker-Containers\docker-pintos\pintos"
+## so that we will work in second dir that files links to first one
+# cd "E:\Docker-Containers\docker-pintos"
+# docker run -itd -p 3522:22 -p 7575:7575 -p 9595:9595 -p 1234:1234 -h localhost --privileged --security-opt seccomp:unconfined -e DISPLAY=$DISPLAY --name pintos-container --dns=8.8.8.8 -v  $PWD\pintos\src:/pintos/pintos/src -P pintos-docker
+
+## to restart
+#docker ps -a
+#docker start -t "id"
+
+## to ssh
+#ssh -X -p 3522 root@127.0.0.1
+
+## to open gui (ie. firefox) from ssh with display on host
+#on host: run "XLaunch" > Multiple Windows > .. no cli.. > addit...: -ac > Finish
+#on ssh: export DISPLAY=192.168.1.103:0.0 && firefox

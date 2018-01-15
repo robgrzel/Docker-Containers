@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1bb4d201-dee9-4627-a3a7-c8e05aa0cd4e}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>pintos</RootNamespace>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{FC1A4D80-50E9-41DA-9192-61C0DBAA00D2}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <ItemGroup>
+    <ClCompile Include="src\devices\batch-scheduler.c" />
+    <ClCompile Include="src\devices\block.c" />
+    <ClCompile Include="src\devices\disk.c" />
+    <ClCompile Include="src\devices\ide.c" />
+    <ClCompile Include="src\devices\input.c" />
+    <ClCompile Include="src\devices\intq.c" />
+    <ClCompile Include="src\devices\kbd.c" />
+    <ClCompile Include="src\devices\partition.c" />
+    <ClCompile Include="src\devices\pit.c" />
+    <ClCompile Include="src\devices\rtc.c" />
+    <ClCompile Include="src\devices\serial.c" />
+    <ClCompile Include="src\devices\shutdown.c" />
+    <ClCompile Include="src\devices\speaker.c" />
+    <ClCompile Include="src\devices\timer.c" />
+    <ClCompile Include="src\devices\vga.c" />
+    <ClCompile Include="src\examples\bubsort.c" />
+    <ClCompile Include="src\examples\cat.c" />
+    <ClCompile Include="src\examples\cmp.c" />
+    <ClCompile Include="src\examples\cp.c" />
+    <ClCompile Include="src\examples\echo.c" />
+    <ClCompile Include="src\examples\halt.c" />
+    <ClCompile Include="src\examples\hex-dump.c" />
+    <ClCompile Include="src\examples\insult.c" />
+    <ClCompile Include="src\examples\lineup.c" />
+    <ClCompile Include="src\examples\ls.c" />
+    <ClCompile Include="src\examples\matmult.c" />
+    <ClCompile Include="src\examples\mcat.c" />
+    <ClCompile Include="src\examples\mcp.c" />
+    <ClCompile Include="src\examples\mkdir.c" />
+    <ClCompile Include="src\examples\pwd.c" />
+    <ClCompile Include="src\examples\recursor.c" />
+    <ClCompile Include="src\examples\rm.c" />
+    <ClCompile Include="src\examples\shell.c" />
+    <ClCompile Include="src\filesys\directory.c" />
+    <ClCompile Include="src\filesys\file.c" />
+    <ClCompile Include="src\filesys\filesys.c" />
+    <ClCompile Include="src\filesys\free-map.c" />
+    <ClCompile Include="src\filesys\fsutil.c" />
+    <ClCompile Include="src\filesys\inode.c" />
+    <ClCompile Include="src\lib\arithmetic.c" />
+    <ClCompile Include="src\lib\debug.c" />
+    <ClCompile Include="src\lib\kernel\bitmap.c" />
+    <ClCompile Include="src\lib\kernel\console.c" />
+    <ClCompile Include="src\lib\kernel\debug.c" />
+    <ClCompile Include="src\lib\kernel\hash.c" />
+    <ClCompile Include="src\lib\kernel\list.c" />
+    <ClCompile Include="src\lib\random.c" />
+    <ClCompile Include="src\lib\stdio.c" />
+    <ClCompile Include="src\lib\stdlib.c" />
+    <ClCompile Include="src\lib\string.c" />
+    <ClCompile Include="src\lib\user\console.c" />
+    <ClCompile Include="src\lib\user\debug.c" />
+    <ClCompile Include="src\lib\user\entry.c" />
+    <ClCompile Include="src\lib\user\syscall.c" />
+    <ClCompile Include="src\lib\ustar.c" />
+    <ClCompile Include="src\shell\._lsh.c" />
+    <ClCompile Include="src\shell\._parse.c" />
+    <ClCompile Include="src\shell\lsh.c" />
+    <ClCompile Include="src\shell\parse.c" />
+    <ClCompile Include="src\tests\arc4.c" />
+    <ClCompile Include="src\tests\cksum.c" />
+    <ClCompile Include="src\tests\filesys\base\child-syn-read.c" />
+    <ClCompile Include="src\tests\filesys\base\child-syn-wrt.c" />
+    <ClCompile Include="src\tests\filesys\base\lg-create.c" />
+    <ClCompile Include="src\tests\filesys\base\lg-full.c" />
+    <ClCompile Include="src\tests\filesys\base\lg-random.c" />
+    <ClCompile Include="src\tests\filesys\base\lg-seq-block.c" />
+    <ClCompile Include="src\tests\filesys\base\lg-seq-random.c" />
+    <ClCompile Include="src\tests\filesys\base\sm-create.c" />
+    <ClCompile Include="src\tests\filesys\base\sm-full.c" />
+    <ClCompile Include="src\tests\filesys\base\sm-random.c" />
+    <ClCompile Include="src\tests\filesys\base\sm-seq-block.c" />
+    <ClCompile Include="src\tests\filesys\base\sm-seq-random.c" />
+    <ClCompile Include="src\tests\filesys\base\syn-read.c" />
+    <ClCompile Include="src\tests\filesys\base\syn-remove.c" />
+    <ClCompile Include="src\tests\filesys\base\syn-write.c" />
+    <ClCompile Include="src\tests\filesys\extended\child-syn-rw.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-empty-name.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-mk-tree.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-mkdir.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-open.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-over-file.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-rm-cwd.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-rm-parent.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-rm-root.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-rm-tree.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-rmdir.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-under-file.c" />
+    <ClCompile Include="src\tests\filesys\extended\dir-vine.c" />
+    <ClCompile Include="src\tests\filesys\extended\grow-create.c" />
+    <ClCompile Include="src\tests\filesys\extended\grow-dir-lg.c" />
+    <ClCompile Include="src\tests\filesys\extended\grow-file-size.c" />
+    <ClCompile Include="src\tests\filesys\extended\grow-root-lg.c" />
+    <ClCompile Include="src\tests\filesys\extended\grow-root-sm.c" />
+    <ClCompile Include="src\tests\filesys\extended\grow-seq-lg.c" />
+    <ClCompile Include="src\tests\filesys\extended\grow-seq-sm.c" />
+    <ClCompile Include="src\tests\filesys\extended\grow-sparse.c" />
+    <ClCompile Include="src\tests\filesys\extended\grow-tell.c" />
+    <ClCompile Include="src\tests\filesys\extended\grow-two-files.c" />
+    <ClCompile Include="src\tests\filesys\extended\mk-tree.c" />
+    <ClCompile Include="src\tests\filesys\extended\syn-rw.c" />
+    <ClCompile Include="src\tests\filesys\extended\tar.c" />
+    <ClCompile Include="src\tests\filesys\seq-test.c" />
+    <ClCompile Include="src\tests\internal\list.c" />
+    <ClCompile Include="src\tests\internal\stdio.c" />
+    <ClCompile Include="src\tests\internal\stdlib.c" />
+    <ClCompile Include="src\tests\lib.c" />
+    <ClCompile Include="src\tests\main.c" />
+    <ClCompile Include="src\tests\threads\alarm-negative.c" />
+    <ClCompile Include="src\tests\threads\alarm-priority.c" />
+    <ClCompile Include="src\tests\threads\alarm-simultaneous.c" />
+    <ClCompile Include="src\tests\threads\alarm-wait.c" />
+    <ClCompile Include="src\tests\threads\alarm-zero.c" />
+    <ClCompile Include="src\tests\threads\batch-scheduler.c" />
+    <ClCompile Include="src\tests\threads\mlfqs-block.c" />
+    <ClCompile Include="src\tests\threads\mlfqs-fair.c" />
+    <ClCompile Include="src\tests\threads\mlfqs-load-1.c" />
+    <ClCompile Include="src\tests\threads\mlfqs-load-60.c" />
+    <ClCompile Include="src\tests\threads\mlfqs-load-avg.c" />
+    <ClCompile Include="src\tests\threads\mlfqs-recent-1.c" />
+    <ClCompile Include="src\tests\threads\priority-change.c" />
+    <ClCompile Include="src\tests\threads\priority-condvar.c" />
+    <ClCompile Include="src\tests\threads\priority-donate-chain.c" />
+    <ClCompile Include="src\tests\threads\priority-donate-lower.c" />
+    <ClCompile Include="src\tests\threads\priority-donate-multiple.c" />
+    <ClCompile Include="src\tests\threads\priority-donate-multiple2.c" />
+    <ClCompile Include="src\tests\threads\priority-donate-nest.c" />
+    <ClCompile Include="src\tests\threads\priority-donate-one.c" />
+    <ClCompile Include="src\tests\threads\priority-donate-sema.c" />
+    <ClCompile Include="src\tests\threads\priority-fifo.c" />
+    <ClCompile Include="src\tests\threads\priority-preempt.c" />
+    <ClCompile Include="src\tests\threads\priority-sema.c" />
+    <ClCompile Include="src\tests\threads\tests.c" />
+    <ClCompile Include="src\tests\userprog\args.c" />
+    <ClCompile Include="src\tests\userprog\bad-jump.c" />
+    <ClCompile Include="src\tests\userprog\bad-jump2.c" />
+    <ClCompile Include="src\tests\userprog\bad-read.c" />
+    <ClCompile Include="src\tests\userprog\bad-read2.c" />
+    <ClCompile Include="src\tests\userprog\bad-write.c" />
+    <ClCompile Include="src\tests\userprog\bad-write2.c" />
+    <ClCompile Include="src\tests\userprog\boundary.c" />
+    <ClCompile Include="src\tests\userprog\child-bad.c" />
+    <ClCompile Include="src\tests\userprog\child-close.c" />
+    <ClCompile Include="src\tests\userprog\child-rox.c" />
+    <ClCompile Include="src\tests\userprog\child-simple.c" />
+    <ClCompile Include="src\tests\userprog\close-bad-fd.c" />
+    <ClCompile Include="src\tests\userprog\close-normal.c" />
+    <ClCompile Include="src\tests\userprog\close-stdin.c" />
+    <ClCompile Include="src\tests\userprog\close-stdout.c" />
+    <ClCompile Include="src\tests\userprog\close-twice.c" />
+    <ClCompile Include="src\tests\userprog\create-bad-ptr.c" />
+    <ClCompile Include="src\tests\userprog\create-bound.c" />
+    <ClCompile Include="src\tests\userprog\create-empty.c" />
+    <ClCompile Include="src\tests\userprog\create-exists.c" />
+    <ClCompile Include="src\tests\userprog\create-long.c" />
+    <ClCompile Include="src\tests\userprog\create-normal.c" />
+    <ClCompile Include="src\tests\userprog\create-null.c" />
+    <ClCompile Include="src\tests\userprog\exec-arg.c" />
+    <ClCompile Include="src\tests\userprog\exec-bad-ptr.c" />
+    <ClCompile Include="src\tests\userprog\exec-missing.c" />
+    <ClCompile Include="src\tests\userprog\exec-multiple.c" />
+    <ClCompile Include="src\tests\userprog\exec-once.c" />
+    <ClCompile Include="src\tests\userprog\exit.c" />
+    <ClCompile Include="src\tests\userprog\halt.c" />
+    <ClCompile Include="src\tests\userprog\multi-child-fd.c" />
+    <ClCompile Include="src\tests\userprog\multi-recurse.c" />
+    <ClCompile Include="src\tests\userprog\no-vm\multi-oom.c" />
+    <ClCompile Include="src\tests\userprog\open-bad-ptr.c" />
+    <ClCompile Include="src\tests\userprog\open-boundary.c" />
+    <ClCompile Include="src\tests\userprog\open-empty.c" />
+    <ClCompile Include="src\tests\userprog\open-missing.c" />
+    <ClCompile Include="src\tests\userprog\open-normal.c" />
+    <ClCompile Include="src\tests\userprog\open-null.c" />
+    <ClCompile Include="src\tests\userprog\open-twice.c" />
+    <ClCompile Include="src\tests\userprog\read-bad-fd.c" />
+    <ClCompile Include="src\tests\userprog\read-bad-ptr.c" />
+    <ClCompile Include="src\tests\userprog\read-boundary.c" />
+    <ClCompile Include="src\tests\userprog\read-normal.c" />
+    <ClCompile Include="src\tests\userprog\read-stdout.c" />
+    <ClCompile Include="src\tests\userprog\read-zero.c" />
+    <ClCompile Include="src\tests\userprog\rox-child.c" />
+    <ClCompile Include="src\tests\userprog\rox-multichild.c" />
+    <ClCompile Include="src\tests\userprog\rox-simple.c" />
+    <ClCompile Include="src\tests\userprog\sc-bad-arg.c" />
+    <ClCompile Include="src\tests\userprog\sc-bad-sp.c" />
+    <ClCompile Include="src\tests\userprog\sc-boundary-2.c" />
+    <ClCompile Include="src\tests\userprog\sc-boundary.c" />
+    <ClCompile Include="src\tests\userprog\wait-bad-pid.c" />
+    <ClCompile Include="src\tests\userprog\wait-killed.c" />
+    <ClCompile Include="src\tests\userprog\wait-simple.c" />
+    <ClCompile Include="src\tests\userprog\wait-twice.c" />
+    <ClCompile Include="src\tests\userprog\write-bad-fd.c" />
+    <ClCompile Include="src\tests\userprog\write-bad-ptr.c" />
+    <ClCompile Include="src\tests\userprog\write-boundary.c" />
+    <ClCompile Include="src\tests\userprog\write-normal.c" />
+    <ClCompile Include="src\tests\userprog\write-stdin.c" />
+    <ClCompile Include="src\tests\userprog\write-zero.c" />
+    <ClCompile Include="src\tests\vm\child-inherit.c" />
+    <ClCompile Include="src\tests\vm\child-linear.c" />
+    <ClCompile Include="src\tests\vm\child-mm-wrt.c" />
+    <ClCompile Include="src\tests\vm\child-qsort-mm.c" />
+    <ClCompile Include="src\tests\vm\child-qsort.c" />
+    <ClCompile Include="src\tests\vm\child-sort.c" />
+    <ClCompile Include="src\tests\vm\mmap-bad-fd.c" />
+    <ClCompile Include="src\tests\vm\mmap-clean.c" />
+    <ClCompile Include="src\tests\vm\mmap-close.c" />
+    <ClCompile Include="src\tests\vm\mmap-exit.c" />
+    <ClCompile Include="src\tests\vm\mmap-inherit.c" />
+    <ClCompile Include="src\tests\vm\mmap-misalign.c" />
+    <ClCompile Include="src\tests\vm\mmap-null.c" />
+    <ClCompile Include="src\tests\vm\mmap-over-code.c" />
+    <ClCompile Include="src\tests\vm\mmap-over-data.c" />
+    <ClCompile Include="src\tests\vm\mmap-over-stk.c" />
+    <ClCompile Include="src\tests\vm\mmap-overlap.c" />
+    <ClCompile Include="src\tests\vm\mmap-read.c" />
+    <ClCompile Include="src\tests\vm\mmap-remove.c" />
+    <ClCompile Include="src\tests\vm\mmap-shuffle.c" />
+    <ClCompile Include="src\tests\vm\mmap-twice.c" />
+    <ClCompile Include="src\tests\vm\mmap-unmap.c" />
+    <ClCompile Include="src\tests\vm\mmap-write.c" />
+    <ClCompile Include="src\tests\vm\mmap-zero.c" />
+    <ClCompile Include="src\tests\vm\page-linear.c" />
+    <ClCompile Include="src\tests\vm\page-merge-mm.c" />
+    <ClCompile Include="src\tests\vm\page-merge-par.c" />
+    <ClCompile Include="src\tests\vm\page-merge-seq.c" />
+    <ClCompile Include="src\tests\vm\page-merge-stk.c" />
+    <ClCompile Include="src\tests\vm\page-parallel.c" />
+    <ClCompile Include="src\tests\vm\page-shuffle.c" />
+    <ClCompile Include="src\tests\vm\parallel-merge.c" />
+    <ClCompile Include="src\tests\vm\pt-bad-addr.c" />
+    <ClCompile Include="src\tests\vm\pt-bad-read.c" />
+    <ClCompile Include="src\tests\vm\pt-big-stk-obj.c" />
+    <ClCompile Include="src\tests\vm\pt-grow-bad.c" />
+    <ClCompile Include="src\tests\vm\pt-grow-pusha.c" />
+    <ClCompile Include="src\tests\vm\pt-grow-stack.c" />
+    <ClCompile Include="src\tests\vm\pt-grow-stk-sc.c" />
+    <ClCompile Include="src\tests\vm\pt-write-code-2.c" />
+    <ClCompile Include="src\tests\vm\pt-write-code.c" />
+    <ClCompile Include="src\tests\vm\qsort.c" />
+    <ClCompile Include="src\threads\init.c" />
+    <ClCompile Include="src\threads\interrupt.c" />
+    <ClCompile Include="src\threads\malloc.c" />
+    <ClCompile Include="src\threads\palloc.c" />
+    <ClCompile Include="src\threads\synch.c" />
+    <ClCompile Include="src\threads\thread.c" />
+    <ClCompile Include="src\userprog\exception.c" />
+    <ClCompile Include="src\userprog\gdt.c" />
+    <ClCompile Include="src\userprog\pagedir.c" />
+    <ClCompile Include="src\userprog\process.c" />
+    <ClCompile Include="src\userprog\syscall.c" />
+    <ClCompile Include="src\userprog\tss.c" />
+    <ClCompile Include="src\utils\setitimer-helper.c" />
+    <ClCompile Include="src\utils\squish-pty.c" />
+    <ClCompile Include="src\utils\squish-unix.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\devices\block.h" />
+    <ClInclude Include="src\devices\disk.h" />
+    <ClInclude Include="src\devices\ide.h" />
+    <ClInclude Include="src\devices\input.h" />
+    <ClInclude Include="src\devices\intq.h" />
+    <ClInclude Include="src\devices\kbd.h" />
+    <ClInclude Include="src\devices\partition.h" />
+    <ClInclude Include="src\devices\pit.h" />
+    <ClInclude Include="src\devices\rtc.h" />
+    <ClInclude Include="src\devices\serial.h" />
+    <ClInclude Include="src\devices\shutdown.h" />
+    <ClInclude Include="src\devices\speaker.h" />
+    <ClInclude Include="src\devices\timer.h" />
+    <ClInclude Include="src\devices\vga.h" />
+    <ClInclude Include="src\filesys\directory.h" />
+    <ClInclude Include="src\filesys\file.h" />
+    <ClInclude Include="src\filesys\filesys.h" />
+    <ClInclude Include="src\filesys\free-map.h" />
+    <ClInclude Include="src\filesys\fsutil.h" />
+    <ClInclude Include="src\filesys\inode.h" />
+    <ClInclude Include="src\filesys\off_t.h" />
+    <ClInclude Include="src\lib\ctype.h" />
+    <ClInclude Include="src\lib\debug.h" />
+    <ClInclude Include="src\lib\inttypes.h" />
+    <ClInclude Include="src\lib\kernel\bitmap.h" />
+    <ClInclude Include="src\lib\kernel\console.h" />
+    <ClInclude Include="src\lib\kernel\hash.h" />
+    <ClInclude Include="src\lib\kernel\list.h" />
+    <ClInclude Include="src\lib\kernel\stdio.h" />
+    <ClInclude Include="src\lib\limits.h" />
+    <ClInclude Include="src\lib\packed.h" />
+    <ClInclude Include="src\lib\random.h" />
+    <ClInclude Include="src\lib\round.h" />
+    <ClInclude Include="src\lib\stdarg.h" />
+    <ClInclude Include="src\lib\stdbool.h" />
+    <ClInclude Include="src\lib\stddef.h" />
+    <ClInclude Include="src\lib\stdint.h" />
+    <ClInclude Include="src\lib\stdio.h" />
+    <ClInclude Include="src\lib\stdlib.h" />
+    <ClInclude Include="src\lib\string.h" />
+    <ClInclude Include="src\lib\syscall-nr.h" />
+    <ClInclude Include="src\lib\user\stdio.h" />
+    <ClInclude Include="src\lib\user\syscall.h" />
+    <ClInclude Include="src\lib\ustar.h" />
+    <ClInclude Include="src\shell\._parse.h" />
+    <ClInclude Include="src\shell\parse.h" />
+    <ClInclude Include="src\tests\arc4.h" />
+    <ClInclude Include="src\tests\cksum.h" />
+    <ClInclude Include="src\tests\filesys\base\syn-read.h" />
+    <ClInclude Include="src\tests\filesys\base\syn-write.h" />
+    <ClInclude Include="src\tests\filesys\extended\mk-tree.h" />
+    <ClInclude Include="src\tests\filesys\extended\syn-rw.h" />
+    <ClInclude Include="src\tests\filesys\seq-test.h" />
+    <ClInclude Include="src\tests\lib.h" />
+    <ClInclude Include="src\tests\main.h" />
+    <ClInclude Include="src\tests\threads\tests.h" />
+    <ClInclude Include="src\tests\userprog\boundary.h" />
+    <ClInclude Include="src\tests\vm\parallel-merge.h" />
+    <ClInclude Include="src\tests\vm\qsort.h" />
+    <ClInclude Include="src\threads\flags.h" />
+    <ClInclude Include="src\threads\init.h" />
+    <ClInclude Include="src\threads\interrupt.h" />
+    <ClInclude Include="src\threads\intr-stubs.h" />
+    <ClInclude Include="src\threads\io.h" />
+    <ClInclude Include="src\threads\loader.h" />
+    <ClInclude Include="src\threads\malloc.h" />
+    <ClInclude Include="src\threads\palloc.h" />
+    <ClInclude Include="src\threads\pte.h" />
+    <ClInclude Include="src\threads\switch.h" />
+    <ClInclude Include="src\threads\synch.h" />
+    <ClInclude Include="src\threads\thread.h" />
+    <ClInclude Include="src\threads\vaddr.h" />
+    <ClInclude Include="src\userprog\exception.h" />
+    <ClInclude Include="src\userprog\gdt.h" />
+    <ClInclude Include="src\userprog\pagedir.h" />
+    <ClInclude Include="src\userprog\process.h" />
+    <ClInclude Include="src\userprog\syscall.h" />
+    <ClInclude Include="src\userprog\tss.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\tests\filesys\base\full.inc" />
+    <None Include="src\tests\filesys\base\random.inc" />
+    <None Include="src\tests\filesys\base\seq-block.inc" />
+    <None Include="src\tests\filesys\base\seq-random.inc" />
+    <None Include="src\tests\filesys\create.inc" />
+    <None Include="src\tests\filesys\extended\grow-dir.inc" />
+    <None Include="src\tests\filesys\extended\grow-seq.inc" />
+    <None Include="src\tests\userprog\rox-child.inc" />
+    <None Include="src\tests\userprog\sample.inc" />
+    <None Include="src\tests\vm\sample.inc" />
+    <None Include="src\threads\build\kernel.bin" />
+    <None Include="src\threads\build\loader.bin" />
+  </ItemGroup>
+  <ItemDefinitionGroup />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
